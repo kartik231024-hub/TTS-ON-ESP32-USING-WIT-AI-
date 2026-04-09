@@ -31,6 +31,30 @@ Convert text into real speech using ESP32, Wit.ai API, and MAX98357A amplifier.
 | GND      | GND |
 | VIN      | 5V |
 
+| MAX98357A | ESP32 C3 |
+|----------|------|
+| LRC      | GPIO 5 |
+| BCLK     | GPIO 4 |
+| DIN      | GPIO 6 |
+| GND      | GND |
+| VIN      | 5V |
+
+| MAX98357A | ESP32 S3 |
+|----------|------|
+| LRC      | GPIO 11 |
+| BCLK     | GPIO 12 |
+| DIN      | GPIO 10 |
+| GND      | GND |
+| VIN      | 5V |
+
+| MAX98357A | ESP32 C6 |
+|----------|------|
+| LRC      | GPIO 4 |
+| BCLK     | GPIO 6 |
+| DIN      | GPIO 5 |
+| GND      | GND |
+| VIN      | 5V |
+
 > ⚠️ Pins may change based on your code.
 > 
 ## ⚙️ Setup
