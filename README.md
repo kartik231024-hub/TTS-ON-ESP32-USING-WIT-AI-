@@ -1,51 +1,46 @@
-📢 ESP32 Text-to-Speech (TTS) using Wit.ai
+# 📢 ESP32 Text-to-Speech (TTS) using Wit.ai
 
-This project demonstrates how to implement Text-to-Speech (TTS) on an ESP32 using Wit.ai API and output audio through a MAX98357A I2S amplifier.
+Convert text into real speech using ESP32, Wit.ai API, and MAX98357A amplifier.
 
-🚀 Features
-Convert text into speech using cloud API
-Real-time audio playback on ESP32
-Works with low-cost hardware
-Clean and simple implementation
+---
 
-🧰 Hardware Requirements
-ESP32 (ESP32-C6 / All ESP32 model supported)
-MAX98357A I2S DAC Amplifier
-3W Speaker
-Stable WiFi connection
+## 🚀 Features
+- Text-to-Speech using cloud API  
+- Real-time audio output  
+- Works on low-cost ESP32  
+- Simple and beginner-friendly  
 
-🔌 Circuit Connections
-MAX98357A	ESP32
-LRC	GPIO (e.g., 25)
-BCLK	GPIO (e.g., 26)
-DIN	GPIO (e.g., 22)
-GND	GND
-VIN	5V
+---
 
-⚠️ Pin numbers can vary based on your code—match them properly.
+## 🧰 Hardware Required
+- ESP32 (ESP32-C6 / ESP32-CAM)  
+- MAX98357A I2S Amplifier  
+- 3W Speaker  
+- Jumper Wires  
+- WiFi Connection  
 
-⚙️ Setup Instructions
-Clone the repository
-Open code in Arduino IDE / PlatformIO
-Install required libraries
+---
 
-Add your WiFi credentials:
+## 🔌 Circuit Connections
 
-const char* ssid = "YOUR_WIFI";
-const char* password = "YOUR_PASSWORD";
+| MAX98357A | ESP32 |
+|----------|------|
+| LRC      | GPIO 25 |
+| BCLK     | GPIO 26 |
+| DIN      | GPIO 22 |
+| GND      | GND |
+| VIN      | 5V |
 
-Add your Wit.ai API token:
+> ⚠️ Pins may change based on your code.
+> 
+## ⚙️ Setup
 
-const char* witToken = "YOUR_WIT_AI_TOKEN";
-Upload code to ESP32
+Open Arduino ide and paste this code and change your wifi credentials and wit ai api 
 
-▶️ How it Works
-ESP32 sends text to Wit.ai
-Wit.ai converts text into speech
-Audio data is streamed back
-ESP32 plays audio via I2S (MAX98357A)
+>const char* ssid = "YOUR_WIFI";
+>
+>const char* password = "YOUR_PASSWORD";
+>
+>const char* witToken = "YOUR_WIT_AI_TOKEN";
 
-⚠️ Known Issues
-Audio distortion → Increase buffer size
-Lag in speech → Depends on internet speed
-No output → Check wiring + power supply
+and upload the code
